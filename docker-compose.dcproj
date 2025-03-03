@@ -3,11 +3,13 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Windows</DockerTargetOS>
-    <DockerPublishLocally>False</DockerPublishLocally>
     <ProjectGuid>5eb7272e-da73-493d-989b-96765d7bbbf3</ProjectGuid>
+    <Platforms>x64</Platforms>
+    <DockerComposeProjectName>regression-example</DockerComposeProjectName>
+    <!--<DockerPublishLocally>False</DockerPublishLocally>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://{ServiceIPAddress}{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>webapplication1</DockerServiceName>
+    <DockerServiceName>webapplication1</DockerServiceName>-->
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
