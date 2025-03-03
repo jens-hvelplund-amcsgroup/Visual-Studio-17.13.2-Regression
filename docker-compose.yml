@@ -4,3 +4,5 @@ services:
     build:
       context: .
       dockerfile: WebApplication1\Dockerfile
+    ports:
+      - "$PORT:8080"

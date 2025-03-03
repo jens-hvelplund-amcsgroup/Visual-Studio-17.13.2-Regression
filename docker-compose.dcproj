@@ -5,13 +5,11 @@
     <DockerTargetOS>Windows</DockerTargetOS>
     <ProjectGuid>5eb7272e-da73-493d-989b-96765d7bbbf3</ProjectGuid>
     <Platforms>x64</Platforms>
-    <DockerComposeProjectName>regression-example</DockerComposeProjectName>
-    <!--<DockerPublishLocally>False</DockerPublishLocally>
-    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://{ServiceIPAddress}{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>webapplication1</DockerServiceName>-->
+    <!-- The odd way of injecting the env-file argument works in 17.12.5 -->
+    <DockerComposeProjectName>regression-example  --env-file ".\.env"</DockerComposeProjectName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include=".env" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
